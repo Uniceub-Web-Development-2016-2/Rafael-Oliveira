@@ -1,28 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "reward".
  *
- * The followings are the available columns in table 'user':
+ * The followings are the available columns in table 'reward':
  * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $created_at
- * @property string $deleted_at
- * @property string $last_login
+ * @property string $name
+ * @property string $descrition
+ * @property string $image_url
  *
  * The followings are the available model relations:
  * @property Mission[] $missions
- * @property Reward[] $rewards
+ * @property User[] $users
  */
-class User extends CActiveRecord
+class Reward extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'reward';
 	}
 
 	/**
@@ -33,11 +31,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, created_at', 'required'),
-			array('username, password, created_at, deleted_at, last_login', 'length', 'max'=>45),
+			array('name, descrition, image_url', 'required'),
+			array('name, image_url', 'length', 'max'=>150),
+			array('descrition', 'length', 'max'=>150),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, created_at, deleted_at, last_login', 'safe', 'on'=>'search'),
+			array('id, name, descrition, image_url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,8 +48,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'missions' => array(self::MANY_MANY, 'Mission', 'completion(user_id, mission_id)'),
-			'rewards' => array(self::MANY_MANY, 'Reward', 'user_has_reward(user_id, reward_id)'),
+			'missions' => array(self::MANY_MANY, 'Mission', 'reward_has_mission(reward_id, mission_id)'),
+			'users' => array(self::MANY_MANY, 'User', 'user_has_reward(reward_id, user_id)'),
 		);
 	}
 
@@ -61,11 +60,9 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
-			'created_at' => 'Created At',
-			'deleted_at' => 'Deleted At',
-			'last_login' => 'Last Login',
+			'name' => 'Name',
+			'descrition' => 'Descrition',
+			'image_url' => 'Image Url',
 		);
 	}
 
@@ -88,11 +85,9 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('deleted_at',$this->deleted_at,true);
-		$criteria->compare('last_login',$this->last_login,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('descrition',$this->descrition,true);
+		$criteria->compare('image_url',$this->image_url,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -103,7 +98,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Reward the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
