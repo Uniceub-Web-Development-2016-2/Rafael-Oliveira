@@ -24,7 +24,7 @@ function login(username, pass) {
 
                 window.localStorage.setItem("user", JSON.stringify(data.user));
                 window.localStorage.setItem("credentials", JSON.stringify(payload));
-                window.location = data.user.user_type + "dashboard.html";
+                window.location = "html/dashboard.html";
             } else {
 
                 $("#login-error").empty().text(data.message).css("display", "inline");
