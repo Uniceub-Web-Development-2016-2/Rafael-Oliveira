@@ -7,7 +7,8 @@ $(document).on("click", "#login-btn", function () {
 $(document).on("click", "#submit-login", function () {
     var username = $("#email").val();
     var pass = $("#password").val();
-    login(username, pass);
+    window.location = "html/dashboard.html";
+    //login(username, pass);
 });
 
 function login(username, pass) {
