@@ -7,11 +7,10 @@
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property integer $goup_id
  * @property string $deleted_at
  *
  * The followings are the available model relations:
- * @property User[] $users
+ * @property EventHasMission[] $eventHasMissions
  * @property Reward[] $rewards
  */
 class Mission extends CActiveRecord
@@ -33,12 +32,12 @@ class Mission extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, description', 'required'),
-			array('goup_id', 'numerical', 'integerOnly'=>true),
-			array('name, deleted_at', 'length', 'max'=>45),
+			array('name', 'length', 'max'=>45),
 			array('description', 'length', 'max'=>100),
+			array('deleted_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, goup_id, deleted_at', 'safe', 'on'=>'search'),
+			array('id, name, description, deleted_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +49,7 @@ class Mission extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::MANY_MANY, 'User', 'completion(mission_id, user_id)'),
+			'eventHasMissions' => array(self::HAS_MANY, 'EventHasMission', 'mission_id'),
 			'rewards' => array(self::MANY_MANY, 'Reward', 'reward_has_mission(mission_id, reward_id)'),
 		);
 	}
@@ -64,7 +63,6 @@ class Mission extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'description' => 'Description',
-			'goup_id' => 'Goup',
 			'deleted_at' => 'Deleted At',
 		);
 	}
@@ -90,7 +88,6 @@ class Mission extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('goup_id',$this->goup_id);
 		$criteria->compare('deleted_at',$this->deleted_at,true);
 
 		return new CActiveDataProvider($this, array(
