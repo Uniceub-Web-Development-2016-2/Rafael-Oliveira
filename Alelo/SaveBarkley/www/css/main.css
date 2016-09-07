@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* MAIN CSS Document */
+
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+}
+
+div[class*="col-"]{
+    padding:0;
+}
+
+.MicrosoftMap .MapPushpinBase img {
+    border: none;
+    width: 20px;
+    
+}
+
+#header{
+    text-align:center;
+   
+}
+
+#upper-header{
+    background-color: #bf2e2e;
+    padding-top: 3%;
+    font-size: 150%;
+    color: white;
+    min-height: 70%;
+} 
+
+#lower-header{
+    background-color: white;
+    z-index:1;
+}
+
+#avatar{
+   margin-bottom: -30%;
+    margin-top: -40%;
+    background-color: white;
+    border-radius: 90px;
+    height: 110px;
+    padding: 8px;
+}
+
+#avatar div{
+    width: 100%;
+    border-radius: 50px;
+    height: 95px;
+    border: 5px solid red;
+    padding-top: 9px;
+}
+
+#lower-header img{
+    width: 70%;
+   
+}
+
+#lower-header p{
+    margin-top: 5%;
+
+}

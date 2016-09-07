@@ -1,26 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "mission".
+ * This is the model class for table "mission_completed".
  *
- * The followings are the available columns in table 'mission':
+ * The followings are the available columns in table 'mission_completed':
  * @property integer $id
- * @property string $name
- * @property string $description
- * @property string $deleted_at
+ * @property integer $mission_id
+ * @property integer $user_id
+ * @property string $completed_date
  *
  * The followings are the available model relations:
- * @property EventHasMission[] $eventHasMissions
- * @property Reward[] $rewards
+ * @property Mission $mission
+ * @property User $user
  */
-class Mission extends CActiveRecord
+class MissionCompleted extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'mission';
+		return 'mission_completed';
 	}
 
 	/**
@@ -31,13 +31,12 @@ class Mission extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
-			array('name', 'length', 'max'=>45),
-			array('description', 'length', 'max'=>100),
-			array('deleted_at', 'safe'),
+			array('mission_id, user_id', 'required'),
+			array('mission_id, user_id', 'numerical', 'integerOnly'=>true),
+			array('completed_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, deleted_at', 'safe', 'on'=>'search'),
+			array('id, mission_id, user_id, completed_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,8 +48,8 @@ class Mission extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'eventHasMissions' => array(self::HAS_MANY, 'EventHasMission', 'mission_id'),
-			'rewards' => array(self::MANY_MANY, 'Reward', 'reward_has_mission(mission_id, reward_id)'),
+			'mission' => array(self::BELONGS_TO, 'Mission', 'mission_id'),
+			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 
@@ -61,9 +60,9 @@ class Mission extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'deleted_at' => 'Deleted At',
+			'mission_id' => 'Mission',
+			'user_id' => 'User',
+			'completed_date' => 'Completed Date',
 		);
 	}
 
@@ -86,9 +85,9 @@ class Mission extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('deleted_at',$this->deleted_at,true);
+		$criteria->compare('mission_id',$this->mission_id);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('completed_date',$this->completed_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -99,22 +98,10 @@ class Mission extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Mission the static model class
+	 * @return MissionCompleted the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	public static function returnCompletion($mission_id , $user_id){
-		$completed = MissionCompleted::model()->findByAttributes(array('mission_id'=> $mission_id , "user_id" =>$user_id));
-		
-		if($completed != null){
-			$completed = "Completo";
-		}else{
-			$completed = "Incompleto";
-		}
-
-		return $completed;
 	}
 }

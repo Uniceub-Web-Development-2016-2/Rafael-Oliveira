@@ -29,13 +29,14 @@ class SiteController extends Controller
 	public function actionLogin()
 	{
 		
-		$model = new User;
+		$model = new LoginForm;
 		$user = User::model()->findByAttributes(array('username'=>$_POST["username"]));
 
 		$model->attributes=$_POST;
+
 		// validate user input and redirect to the previous page if valid
 		if($model->validate() && $model->login()){
-
+			
 			$load = array("status"=>true , "user"=> $user->attributes);
 			echo json_encode($load);
 		}

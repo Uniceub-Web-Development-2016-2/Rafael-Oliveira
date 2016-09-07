@@ -1,21 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "completion".
+ * This is the model class for table "event_has_mission".
  *
- * The followings are the available columns in table 'completion':
- * @property integer $user_id
+ * The followings are the available columns in table 'event_has_mission':
+ * @property integer $id
  * @property integer $mission_id
- * @property string $completion_date
+ * @property integer $event_id
+ *
+ * The followings are the available model relations:
+ * @property Event $event
+ * @property Mission $mission
  */
-class Completion extends CActiveRecord
+class EventHasMission extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'completion';
+		return 'event_has_mission';
 	}
 
 	/**
@@ -26,11 +30,11 @@ class Completion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, mission_id, completion_date', 'required'),
-			array('user_id, mission_id', 'numerical', 'integerOnly'=>true),
+			array('mission_id, event_id', 'required'),
+			array('mission_id, event_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, mission_id, completion_date', 'safe', 'on'=>'search'),
+			array('id, mission_id, event_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -42,6 +46,8 @@ class Completion extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'event' => array(self::BELONGS_TO, 'Event', 'event_id'),
+			'mission' => array(self::BELONGS_TO, 'Mission', 'mission_id'),
 		);
 	}
 
@@ -51,9 +57,9 @@ class Completion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'user_id' => 'User',
+			'id' => 'ID',
 			'mission_id' => 'Mission',
-			'completion_date' => 'Completion Date',
+			'event_id' => 'Event',
 		);
 	}
 
@@ -75,9 +81,9 @@ class Completion extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('mission_id',$this->mission_id);
-		$criteria->compare('completion_date',$this->completion_date,true);
+		$criteria->compare('event_id',$this->event_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -88,7 +94,7 @@ class Completion extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Completion the static model class
+	 * @return EventHasMission the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
