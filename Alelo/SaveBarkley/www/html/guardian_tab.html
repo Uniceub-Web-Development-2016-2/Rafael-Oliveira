@@ -78,11 +78,11 @@
 
                     </div>
                     <div class="collapse-trigger col-xs-12">
-                        <span href="#demo-1" data-toggle="collapse" class="glyphicon glyphicon-circle-arrow-down"></span>
+                        <span href=<%='#trigger-'+i%> data-toggle="collapse" class="glyphicon glyphicon-circle-arrow-down"></span>
                     </div>
                 </div>
 
-                <div id="demo-1" class="col-xs-12 collapse">
+                <div id=<%='trigger-'+i%> class="col-xs-12 collapse">
                     <%_.each(event.missions , function(mission , i){%>
                         <div class="col-xs-7" data-go-to-mission="<%=mission.id%>">
                             <p><%=mission.name%></p>

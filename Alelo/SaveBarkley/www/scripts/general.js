@@ -2,6 +2,7 @@
     
     $(".container").css({ "min-height": $(window).height() });
     $("#header").css({ "height": $(window).height() * 0.2 });
+    
        
     
 });

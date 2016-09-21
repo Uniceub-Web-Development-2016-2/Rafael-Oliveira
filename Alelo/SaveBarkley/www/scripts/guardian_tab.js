@@ -30,6 +30,6 @@ function loadEvents(user_id) {
 
 $(document).on("click", "[data-go-to-mission]", function () {
     window.localStorage.setItem("current_mission", $(this).data("go-to-mission"));
-    console.log($(this).data("go-to-mission"));
+   
     window.location = "mission_tab.html";
 });
