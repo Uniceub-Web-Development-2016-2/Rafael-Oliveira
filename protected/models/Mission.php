@@ -117,4 +117,6 @@ class Mission extends CActiveRecord
 
 		return $completed;
 	}
+
+	
 }

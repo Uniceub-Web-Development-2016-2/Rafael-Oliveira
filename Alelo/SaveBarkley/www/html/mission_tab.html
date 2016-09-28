@@ -57,15 +57,17 @@
                     <h4 class="modal-title" data-mission-name></h4>
                 </div>
                 
-                <div id="dump-requirements" class="modal-body">
+                <div id="dump-requirements" data-current-window="0" data-length="4" class="modal-body">
                    
                  
                 </div>
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
-                    <button id="submit-login" type="button" class="btn btn-primary">Submeter Respostas</button>
+                    <button type="button" class="btn btn-default hide" data-value="-1" data-control="back">Voltar</button>
+                    <button type="button" class="btn btn-default" data-value="1" data-control="next">Proximo</button>
+
+                    <button id="submit-requirements" type="button" class="btn btn-primary hide">Submeter Respostas</button>
                 </div>
             </div>
         </div>
@@ -77,28 +79,32 @@
        
         <%_.each(requirements , function(requirement , i){%>
             
-            <div class="row requirement-container">
-                <div class="requirement-row col-xs-12">
-                    <div class="col-xs-12 requirement-description">
-                        <p><%=requirement.description%></p>
+                <%if(i==0){
+                    var show = "show"; 
+                }else{
+                    var show = "hide";
+                }%>
+                <div class="requirement-row col-xs-12 <%=show%>" data-answer="<%=requirement.answer%>" data-window="<%=i%>" data-requirement="<%= requirement.id %>">
+                    <div class="col-xs-12 requirement-description ">
+                        <p ><%=requirement.description%></p>
                     </div>
-                    <div class="col-xs-12 requirement-alternatives">
-                        <p><%='A-- ' + requirement.A%></p>
+                    <div data-options="A" class="col-xs-12 requirement-alternatives">
+                        <p ><%='A-- ' + requirement.A%></p>
                     </div>
-                    <div class="col-xs-12 requirement-alternatives">
+                    <div data-options="B" class="col-xs-12 requirement-alternatives">
                         <p><%='B-- ' + requirement.B%></p>
                     </div>
-                    <div class="col-xs-12 requirement-alternatives">
+                    <div data-options="C" class="col-xs-12 requirement-alternatives">
                         <p><%='C-- ' + requirement.C%></p>
                     </div>
-                    <div class="col-xs-12 requirement-alternatives">
+                    <div data-options="D" class="col-xs-12 requirement-alternatives">
                         <p><%='D-- ' + requirement.D%></p>
                     </div>
 
                     
                 </div>
 
-            </div>
+          
 
 
         <%});%>
