@@ -4,8 +4,8 @@
  * This is the model class for table "reward_has_mission".
  *
  * The followings are the available columns in table 'reward_has_mission':
- * @property integer $reward_id
- * @property integer $mission_id
+ * @property integer $rm_reward_id
+ * @property integer $rm_mission_id
  */
 class RewardHasMission extends CActiveRecord
 {
@@ -25,11 +25,11 @@ class RewardHasMission extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('reward_id, mission_id', 'required'),
-			array('reward_id, mission_id', 'numerical', 'integerOnly'=>true),
+			array('rm_reward_id, rm_mission_id', 'required'),
+			array('rm_reward_id, rm_mission_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('reward_id, mission_id', 'safe', 'on'=>'search'),
+			array('rm_reward_id, rm_mission_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,8 +50,8 @@ class RewardHasMission extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'reward_id' => 'Reward',
-			'mission_id' => 'Mission',
+			'rm_reward_id' => 'Rm Reward',
+			'rm_mission_id' => 'Rm Mission',
 		);
 	}
 
@@ -73,8 +73,8 @@ class RewardHasMission extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('reward_id',$this->reward_id);
-		$criteria->compare('mission_id',$this->mission_id);
+		$criteria->compare('rm_reward_id',$this->rm_reward_id);
+		$criteria->compare('rm_mission_id',$this->rm_mission_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

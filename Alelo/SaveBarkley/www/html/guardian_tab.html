@@ -21,7 +21,7 @@
             </div>
             <div id="lower-header" class="col-xs-12 ">
                 <div class="col-xs-4">
-                    <p id="title">Mestre das Plantas</p>
+                    <a href="rewards_tab.html" id="title">Ver medalhas</a>
                 </div>
                 <div class="col-xs-4">
                     <div id="avatar">
@@ -38,11 +38,9 @@
         <div id="about-me" class="row">
             <div  class="col-xs-10 col-xs-offset-1">
                 <p>
-                    Hi There.
-                    We are the Peaches Animal Shelter.
-                    Our shelter takes care all kinds of animals
-                    looking for homes.
-                    Check out our missions below.
+                    Abaixo estão listadas todos os eventos e suas respectivas missões. Clique na setinha azul para expandir o evento!
+                    
+
                 </p>
             </div>
         </div>
@@ -74,7 +72,7 @@
                     </div>
                     <div class="col-xs-3 ">
                         <span>Progresso</span>
-                        <p>80%</p>
+                        <p><%=event.percent%> %</p>
 
                     </div>
                     <div class="collapse-trigger col-xs-12">
@@ -84,11 +82,16 @@
 
                 <div id=<%='trigger-'+i%> class="col-xs-12 collapse">
                     <%_.each(event.missions , function(mission , i){%>
-                        <div class="col-xs-7" data-go-to-mission="<%=mission.id%>">
+                        <div class="col-xs-7" data-go-to-mission="<%=mission.mission_id%>">
                             <p><%=mission.name%></p>
                         </div>    
                         <div class="col-xs-3 col-xs-offset-2">
-                            <span><%=mission.completed%></span>
+                            <%if(mission.mission_completion_id != null){%>
+                                <span>Completo</span>
+                            <%}else{%>
+                                <span>Incompleto</span>
+
+                            <%}%>
                         </div>    
                     <%})%>
                 </div>

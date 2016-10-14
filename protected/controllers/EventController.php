@@ -14,18 +14,17 @@ class EventController extends Controller
 		$load = Array();	
 		
 		foreach($events as $event){
-			$missions = Array();
-
-			foreach ($event->eventHasMissions as $hasMission) {
-				$mission = $hasMission->mission->attributes;
-				$mission["completed"] = Mission::returnCompletion($mission["id"] , $_GET["user_id"]);
-				$missions[] = $mission;
-			}
+			//all missions in a event
+			$all_missions = Emc::model()->findAllByAttributes(array("event_id" => $event->event_id));
+			//all completed missions in a event
+			$comp = Emc::model()->findAllByAttributes(array("event_id" => $event->event_id , "user_id_fk" => $_POST["user_id"]));
+			$percent  = (round( 100 * (sizeof($comp) / sizeof($all_missions))));
+			
 
 			$load[] =  Array(
 				"event_content" =>	$event->attributes,
-				"missions" => $missions
-
+				"missions" => Mission::returnEventMissionAndCompletion($event->event_id , $_POST["user_id"]),
+				"percent" => $percent
 			);
 			
 		}

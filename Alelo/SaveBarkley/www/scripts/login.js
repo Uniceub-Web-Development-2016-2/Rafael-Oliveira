@@ -7,33 +7,20 @@ $(document).on("click", "#login-btn", function () {
 $(document).on("click", "#submit-login", function () {
     var username = $("#username").val();
     var pass = $("#password").val();
-    login(username , pass);
+    makeAjax({ username: username, password: pass } , "/site/login" , successLogin);
 });
 
-function login(username , pass){
-    var payload = {username:username , password:pass};
-        
-    $.ajax({
-        type: 'POST',
-        dataType: 'json',
-        url: 'http://localhost/alelo/Rafael-Oliveira/index.php/site/login',
-        data: payload,
-        crossDomain:true,
-        success: function (data, textStatus, jqXHR) {
-            if (data.status) {
+function successLogin(data){
+    if (data != null) {
                 
-                window.localStorage.setItem("user", JSON.stringify(data.user));
-                window.localStorage.setItem("credentials", JSON.stringify(payload));
+        window.localStorage.setItem("user", JSON.stringify(data.user));
+          
+        window.location = "guardian_tab.html";
+    } else {
                 
-                window.location = "guardian_tab.html";
-            } else {
-                
-                $("#login-error").empty().text(data.message).css("display" , "inline");
-            }
-        }, error: function (jqXHR, textStatus, errorThrown) {
-            console.log('Ajax error on passing data');
-        }
-    });
+        $("#login-error").empty().text(data.message).css("display" , "inline");
+    }
+    
 
 }
 

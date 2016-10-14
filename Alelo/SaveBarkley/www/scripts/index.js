@@ -12,7 +12,18 @@
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
-        checkLogin();
+        var user = window.localStorage.getItem("user");
+        
+        if (user != null) {
+            user = JSON.parse(user);
+            user = { username: user.username, password: user.password };
+            window.location = "html/guardian_tab.html";
+
+            //makeAjax(user, "/site/login", checkLogin);
+
+        } else {
+            window.location = "html/landing_page.html";
+        }
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
        

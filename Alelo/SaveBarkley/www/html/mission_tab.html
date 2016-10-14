@@ -64,28 +64,33 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default hide" data-value="-1" data-control="back">Voltar</button>
-                    <button type="button" class="btn btn-default" data-value="1" data-control="next">Proximo</button>
-
-                    <button id="submit-requirements" type="button" class="btn btn-primary hide">Submeter Respostas</button>
+                    <button type="button" class="btn btn-default" data-value="-1" data-control="back" disabled>Voltar</button>
+                    <button type="button" class="btn btn-default" data-value="1" data-control="next" disabled>Proximo</button>
+                    <button id="finalize" type="button" class="btn btn-primary hide">Retornar para os eventos</button>
+                    <button id="submit-requirements" type="button" class="btn btn-primary" disabled>Submeter Respostas</button>
                 </div>
             </div>
         </div>
     </div>
-
+    <script type="text/template" id="tmpl-result">
+        <%=console.log(data)%>
+        <h1><%=data.message%></h1>
+        <%_.each(data.items , function(req , i){%>
+        <div class="col-xs-12 <%=req.correct%>" data-requirement-description>
+            <p><%=req.description%></p>
+        </div>    
+        <%});%>
+    </script>
     <script type="text/template" id="tmpl-requirements">
 
 
        
         <%_.each(requirements , function(requirement , i){%>
             
-                <%if(i==0){
-                    var show = "show"; 
-                }else{
-                    var show = "hide";
-                }%>
+                <%if(i==0){ show = "" }else{show = "hide";}%>        
+
                 <div class="requirement-row col-xs-12 <%=show%>" data-answer="<%=requirement.answer%>" data-window="<%=i%>" data-requirement="<%= requirement.id %>">
-                    <div class="col-xs-12 requirement-description ">
+                    <div class="col-xs-12 requirement-description " data-requirement-description>
                         <p ><%=requirement.description%></p>
                     </div>
                     <div data-options="A" class="col-xs-12 requirement-alternatives">

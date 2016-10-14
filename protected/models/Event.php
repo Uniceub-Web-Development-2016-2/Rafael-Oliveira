@@ -4,10 +4,8 @@
  * This is the model class for table "event".
  *
  * The followings are the available columns in table 'event':
- * @property integer $id
+ * @property integer $event_id
  * @property string $description
- * @property string $created_at
- * @property string $deleted_at
  *
  * The followings are the available model relations:
  * @property EventHasMission[] $eventHasMissions
@@ -32,10 +30,9 @@ class Event extends CActiveRecord
 		return array(
 			array('description', 'required'),
 			array('description', 'length', 'max'=>200),
-			array('created_at, deleted_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, description, created_at, deleted_at', 'safe', 'on'=>'search'),
+			array('event_id, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +44,7 @@ class Event extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'eventHasMissions' => array(self::HAS_MANY, 'EventHasMission', 'event_id'),
+			'eventHasMissions' => array(self::HAS_MANY, 'EventHasMission', 'em_event_id'),
 		);
 	}
 
@@ -57,10 +54,8 @@ class Event extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'event_id' => 'Event',
 			'description' => 'Description',
-			'created_at' => 'Created At',
-			'deleted_at' => 'Deleted At',
 		);
 	}
 
@@ -82,10 +77,8 @@ class Event extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('event_id',$this->event_id);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('deleted_at',$this->deleted_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

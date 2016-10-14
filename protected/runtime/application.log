@@ -666,3 +666,482 @@ Stack trace:
 REQUEST_URI=/alelo/Rafael-Oliveira/index.php/event/GetEvents?user_id=19
 in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php (21)
 in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/06 12:39:29 [error] [php] Trying to get property of non-object (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission?mission_id=
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/06 17:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MissionCompletion/SaveCompletion".' in C:\wamp64\www\alelo\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('MissionCompleti...')
+#1 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/MissionCompletion/SaveCompletion
+HTTP_REFERER=http://localhost:4400/html/mission_tab.html
+---
+2016/10/06 17:46:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MissionCompletion/SaveCompletion".' in C:\wamp64\www\alelo\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('MissionCompleti...')
+#1 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/MissionCompletion/SaveCompletion
+---
+2016/10/06 17:46:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "MissionCompletion/savecompletion".' in C:\wamp64\www\alelo\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('MissionCompleti...')
+#1 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/MissionCompletion/savecompletion
+---
+2016/10/06 17:47:06 [error] [php] Undefined index: mission_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Mission/getmission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 14:37:36 [error] [php] Undefined index: user_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php:21)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): EventController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): EventController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): EventController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/event/GetEvents
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php (21)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 14:49:22 [error] [php] Undefined index: user_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php:21)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): EventController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): EventController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): EventController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/event/GetEvents
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php (21)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 14:54:51 [error] [php] Undefined index: user_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php:21)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): EventController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): EventController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): EventController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/event/GetEvents
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\EventController.php (21)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:24:57 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:25:32 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:26:09 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:26:34 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:27:38 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:27:55 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:31:36 [error] [php] Undefined index: mission_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:34:13 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:34:31 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:33)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (33)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:36:38 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:37:47 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:39:18 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:39:37 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:40:31 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:40:50 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:42:15 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 15:42:51 [error] [php] Undefined index: username (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php:34)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/site/login
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\SiteController.php (34)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 17:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp64\www\alelo\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#3 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/
+HTTP_REFERER=http://localhost/alelo/
+---
+2016/10/14 18:25:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:25:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:25:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:25:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:25:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:26:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:56:01 [error] [php] Trying to get property of non-object (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 18:56:06 [error] [php] Trying to get property of non-object (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:01:20 [error] [php] Trying to get property of non-object (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:01:34 [error] [php] Trying to get property of non-object (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php:6)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): MissionController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): MissionController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): MissionController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/mission/GetMission
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionController.php (6)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:03:24 [warning] [application] Failed to set unsafe attribute "mission_id" of "MissionCompleted".
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionCompletedController.php (11)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:03:24 [warning] [application] Failed to set unsafe attribute "user_id" of "MissionCompleted".
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionCompletedController.php (11)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:13:00 [warning] [application] Failed to set unsafe attribute "mission_id" of "MissionCompleted".
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionCompletedController.php (11)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:13:00 [warning] [application] Failed to set unsafe attribute "user_id" of "MissionCompleted".
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionCompletedController.php (11)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 19:30:15 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.user_id_fk" is not defined.' in C:\wamp64\www\alelo\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\db\schema\CDbCriteria.php(160): CComponent->__set('user_id_fk', '20')
+#1 C:\wamp64\www\alelo\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\wamp64\www\alelo\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\MissionCompletedController.php(7): CActiveRecord->find(Array)
+#4 C:\wamp64\www\alelo\framework\web\actions\CInlineAction.php(49): MissionCompletedController->actionSaveCompletion()
+#5 C:\wamp64\www\alelo\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp64\www\alelo\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp64\www\alelo\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): CController->run('SaveCompletion')
+#9 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('MissionComplete...')
+#10 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/MissionCompleted/SaveCompletion
+HTTP_REFERER=http://localhost:4400/html/mission_tab.html
+---
+2016/10/14 21:19:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:19:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:19:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:19:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:26:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'alelo.mission_join_completion' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `mission_join_completion`.
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:50:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Reward/GetRewards".' in C:\wamp64\www\alelo\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('Reward/GetRewar...')
+#1 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+HTTP_REFERER=http://localhost:4400/html/rewards_tab.html
+---
+2016/10/14 21:51:47 [error] [php] include(Rewards.php): failed to open stream: No such file or directory (C:\wamp64\www\alelo\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php(13): spl_autoload_call()
+#1 C:\wamp64\www\alelo\framework\web\actions\CInlineAction.php(49): RewardController->actionGetRewards()
+#2 C:\wamp64\www\alelo\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp64\www\alelo\framework\web\CController.php(286): RewardController->runAction()
+#4 C:\wamp64\www\alelo\framework\web\CController.php(265): RewardController->runActionWithFilters()
+#5 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): RewardController->run()
+#6 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php (13)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:52:12 [error] [php] Undefined variable: rewardss (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php:16)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): RewardController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): RewardController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): RewardController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php (16)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:52:20 [error] [php] Undefined variable: event (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php:18)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): RewardController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): RewardController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): RewardController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php (18)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:52:39 [error] [php] Undefined index: user_id (C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php:20)
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\web\CController.php(286): RewardController->runAction()
+#1 C:\wamp64\www\alelo\framework\web\CController.php(265): RewardController->runActionWithFilters()
+#2 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): RewardController->run()
+#3 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CWebApplication->run()
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php (20)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:53:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'EM.rm_reward_id' in 'where clause'. The SQL statement executed was: select * from reward_has_mission RM LEFT JOIN mission M ON RM.rm_mission_id = M.mission_id LEFT JOIN mission_completed MC ON MC.mission_id_fk = M.mission_id AND MC.user_id_fk = 20 WHERE EM.rm_reward_id = 1.
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\models\Mission.php (139)
+in C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php (26)
+in C:\wamp64\www\alelo\Rafael-Oliveira\index.php (13)
+2016/10/14 21:53:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'EM.rm_reward_id' in 'where clause'. The SQL statement executed was: select * from reward_has_mission RM LEFT JOIN mission M ON RM.rm_mission_id = M.mission_id LEFT JOIN mission_completed MC ON MC.mission_id_fk = M.mission_id AND MC.user_id_fk = 20 WHERE EM.rm_reward_id = 1' in C:\wamp64\www\alelo\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp64\www\alelo\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp64\www\alelo\Rafael-Oliveira\protected\models\Mission.php(139): CDbCommand->queryAll()
+#2 C:\wamp64\www\alelo\Rafael-Oliveira\protected\controllers\RewardController.php(26): Mission::returnRewardMissionAndCompletion('1', '20')
+#3 C:\wamp64\www\alelo\framework\web\actions\CInlineAction.php(49): RewardController->actionGetRewards()
+#4 C:\wamp64\www\alelo\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp64\www\alelo\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp64\www\alelo\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp64\www\alelo\framework\web\CWebApplication.php(282): CController->run('GetRewards')
+#8 C:\wamp64\www\alelo\framework\web\CWebApplication.php(141): CWebApplication->runController('Reward/GetRewar...')
+#9 C:\wamp64\www\alelo\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\alelo\Rafael-Oliveira\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/alelo/Rafael-Oliveira/index.php/Reward/GetRewards
+HTTP_REFERER=http://localhost:4400/html/rewards_tab.html
+---

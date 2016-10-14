@@ -30,18 +30,19 @@ class SiteController extends Controller
 	{
 		
 		$model = new LoginForm;
-		$user = User::model()->findByAttributes(array('username'=>$_POST["username"]));
+		
+		$user = User::model()->findByAttributes(array('username'=>$_POST['username']));
 
 		$model->attributes=$_POST;
-
+		$load = null;
 		// validate user input and redirect to the previous page if valid
 		if($model->validate() && $model->login()){
 			
-			$load = array("status"=>true , "user"=> $user->attributes);
-			echo json_encode($load);
+			$load = ["user"=> $user->attributes];
+			
 		}
 	
-		
+		echo json_encode($load);
 	}
 
 	/**
@@ -50,6 +51,6 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		echo json_encode(true);
 	}
 }
