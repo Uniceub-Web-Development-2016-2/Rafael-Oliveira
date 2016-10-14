@@ -1,0 +1,21 @@
+﻿.requirement-container{
+    padding-left:10px;
+    padding-right:10px;
+
+}
+.requirement-description{
+    text-align:center;
+    font-weight: bolder;
+}
+
+.selected{
+    background-color: #e2d9d9;
+}
+
+.correct-answer{
+    color : green;
+}
+
+.wrong-answer{
+    color:red; 
+}
