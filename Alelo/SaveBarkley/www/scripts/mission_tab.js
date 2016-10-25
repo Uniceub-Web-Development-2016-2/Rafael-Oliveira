@@ -29,9 +29,9 @@ $(document).on("click", "[data-options]", function () {
     parent.children().removeClass("selected");
     $(this).addClass("selected");
 
-    console.log($("#dump-requirements").data("length") == ($("#dump-requirements").data("current-window")) + 1);
+    console.log($("#dump-requirements").data("length") , ($("#dump-requirements").data("current-window")) +2);
 
-    if ($("#dump-requirements").data("length") == ($("#dump-requirements").data("current-window") + 1)) {
+    if ($("#dump-requirements").data("length") == ($("#dump-requirements").data("current-window") + 2)) {
 
         $("#submit-requirements").prop("disabled", false);
         $("[data-control=next]").prop("disabled", true);
