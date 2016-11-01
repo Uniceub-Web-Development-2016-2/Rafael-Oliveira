@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'event':
  * @property integer $event_id
  * @property string $description
+ * @property string $image_url
  *
  * The followings are the available model relations:
  * @property EventHasMission[] $eventHasMissions
@@ -30,9 +31,10 @@ class Event extends CActiveRecord
 		return array(
 			array('description', 'required'),
 			array('description', 'length', 'max'=>200),
+			array('image_url', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('event_id, description', 'safe', 'on'=>'search'),
+			array('event_id, description, image_url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +58,7 @@ class Event extends CActiveRecord
 		return array(
 			'event_id' => 'Event',
 			'description' => 'Description',
+			'image_url' => 'Image Url',
 		);
 	}
 
@@ -79,6 +82,7 @@ class Event extends CActiveRecord
 
 		$criteria->compare('event_id',$this->event_id);
 		$criteria->compare('description',$this->description,true);
+		$criteria->compare('image_url',$this->image_url,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

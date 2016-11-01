@@ -98,6 +98,7 @@ function saveCompletionSuccess(data) {
 function getMissionContent(data) {
     $("[data-mission-name]").text(data.mission.name);
     $("#description").text(data.mission.mission_description);
+    $("#mission-image-row").css('background-image' , 'url('+data.mission.image_url+')');
     var body_load = _.template($('#tmpl-requirements').text());
     $('#dump-requirements').append(body_load({ requirements: data.requirements }));
     

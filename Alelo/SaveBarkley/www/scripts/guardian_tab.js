@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     
-    var user = window.localStorage.getItem("user");
-    user = JSON.parse(user);
-    $("#username").text(user.username);
+    
     console.log(user.id);
     makeAjax({user_id: user.id }, "/event/GetEvents" , loadEvents);
     

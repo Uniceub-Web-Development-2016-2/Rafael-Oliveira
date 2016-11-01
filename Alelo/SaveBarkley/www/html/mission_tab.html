@@ -16,37 +16,45 @@
     <div id="content" class="container">
         <div id="header" class="row">
             <div id="upper-header" class="col-xs-12 ">
-                <p id="username"></p>
+                <div class="col-xs-4">
+                    <p id="username"></p>
+                    <a href="rewards_tab.html">Prêmios</a>
+                </div>
 
             </div>
             <div id="lower-header" class="col-xs-12 ">
+                <div class="col-xs-4"></div>
                 <div class="col-xs-4">
-                    
-                </div>
-                <div class="col-xs-4">
-                    <div id="avatar">
-                        <div>
-                            <img src="../images/hero.png" />
 
-                        </div>
-                    </div>
+                    <img id="avatar" src="../images/hero.png" />
+
                 </div>
 
-            </div>
-        </div><!--header-->
-
-        <div id="mission" class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-                <p data-mission-name></p>
-                <p id="description"></p>
-            </div>
-            <div class="col-xs-6 col-xs-offset-3">
-                <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#complete-mission-modal">Começar Missão</a>
             </div>
         </div>
 
-    </div><!--container-->
+        <div id="mission-image-row" class="row">
+            
+            <div class="col-xs-10 col-xs-offset-1">
+                <p data-mission-name></p>
+            </div>
+        </div>
 
+        <div id="description-row" class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+               
+                <p id="description"></p>
+            </div>
+           
+        </div>
+
+    </div><!--container-->
+    <footer id="create-account-btn" class="footer" data-toggle="modal" data-target="#complete-mission-modal">
+        <div class="col-xs-12 bottom-text">
+            
+            <p>Começar Missão</p>
+        </div>
+    </footer>
 
     <!-- Modal -->
     <div class="modal fade" id="complete-mission-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -1,4 +1,14 @@
-﻿.requirement-container{
+﻿
+body {
+    background: url(../images/textura1.jpg);
+    background-size: cover;
+    color:white;
+    font-size:large;
+    font-weight:bold;
+   
+}
+
+.requirement-container{
     padding-left:10px;
     padding-right:10px;
 
@@ -18,4 +28,26 @@
 
 .wrong-answer{
     color:red; 
+}
+
+#mission-image-row{
+    margin-bottom: 10px;
+    margin-top: -40px;
+    min-height: 200px;
+    padding-top: 50%;
+}
+
+#mission-image-row p {
+    font-size: x-large;
+}
+
+#description-row{
+    margin-top: 20px;
+}
+
+#mission-image-row img{
+    width:100%;
+}
+#mission-image{
+    margin-bottom: -20px;
 }

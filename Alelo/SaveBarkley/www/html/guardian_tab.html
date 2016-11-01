@@ -16,29 +16,27 @@
     <div id="content" class="container">
         <div id="header" class="row">
             <div id="upper-header" class="col-xs-12 ">
-                <p id="username"></p>
+                <div class="col-xs-4">
+                    <p id="username"></p>
+                    <a href="rewards_tab.html" >Prêmios</a>
+                </div>
                 
             </div>
             <div id="lower-header" class="col-xs-12 ">
+                <div class="col-xs-4"></div>
                 <div class="col-xs-4">
-                    <a href="rewards_tab.html" id="title">Ver medalhas</a>
-                </div>
-                <div class="col-xs-4">
-                    <div id="avatar">
-                        <div>
-                            <img src="../images/hero.png" />
+                        
+                    <img id="avatar" src="../images/hero.png" />
 
-                        </div>
-                    </div>
                 </div>
                 
             </div>
         </div>
 
         <div id="about-me" class="row">
-            <div  class="col-xs-10 col-xs-offset-1">
+            <div  class="col-xs-10 col-xs-offset-1 tab-description">
                 <p>
-                    Abaixo estão listadas todos os eventos e suas respectivas missões. Clique na setinha azul para expandir o evento!
+                    Selecione uma das unidades de conhecimento. Para conquistar prêmios você precisa completar missões.
                     
 
                 </p>
@@ -46,11 +44,7 @@
         </div>
         
         <div id="mission-container" class="row">
-            <div class="col-xs-12">
-                <h1>Eventos</h1>
-            </div>
-
-
+            
             <div id="events"></div>
 
          </div><!--Mission container-->             
@@ -65,34 +59,34 @@
         <%_.each(data , function(event , i){%>
             
             <div class="col-xs-12">
-                <div class="mission-row col-xs-12">
+                <div href=<%='#trigger-'+i%> data-toggle="collapse" class="event-row col-xs-12">
                     <div class="col-xs-9 ">
 
                         <p><%=event.event_content.description%></p>
                     </div>
                     <div class="col-xs-3 ">
-                        <span>Progresso</span>
+                        
                         <p><%=event.percent%> %</p>
 
                     </div>
-                    <div class="collapse-trigger col-xs-12">
-                        <span href=<%='#trigger-'+i%> data-toggle="collapse" class="glyphicon glyphicon-circle-arrow-down"></span>
-                    </div>
+                    
                 </div>
 
                 <div id=<%='trigger-'+i%> class="col-xs-12 collapse">
                     <%_.each(event.missions , function(mission , i){%>
+                    <div class="col-xs-12 mission-row">
                         <div class="col-xs-7" data-go-to-mission="<%=mission.mission_id%>">
                             <p><%=mission.name%></p>
-                        </div>    
+                        </div>
                         <div class="col-xs-3 col-xs-offset-2">
                             <%if(mission.mission_completion_id != null){%>
-                                <span>Completo</span>
+                            <span>Completo</span>
                             <%}else{%>
-                                <span>Incompleto</span>
+                            <span>Incompleto</span>
 
                             <%}%>
-                        </div>    
+                        </div>
+                    </div>        
                     <%})%>
                 </div>
             </div>

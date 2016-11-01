@@ -1,7 +1,4 @@
-﻿#upper-header{
-    background-color:#2e8bbf;
-}
-
+﻿
 #avatar div {
     
     border: 5px solid #2e8bbf;
@@ -38,9 +35,6 @@
     
 }
 
-.mission-row{
-    border-top: solid 1px #2e8bbf;
-}
 
 .collapse-trigger{
     text-align:center;

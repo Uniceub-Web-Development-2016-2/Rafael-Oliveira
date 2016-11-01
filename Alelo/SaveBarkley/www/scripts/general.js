@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
-    
-    $(".container").css({ "min-height": $(window).height() });
+    var user = window.localStorage.getItem("user");
+    user = JSON.parse(user);
+    $("#username").text(user.username);
+    $("body").css({ "min-height": $(window).height() });
     $("#header").css({ "height": $(window).height() * 0.2 });
    
     

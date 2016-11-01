@@ -14,11 +14,6 @@ div[class*="col-"]{
     padding:0;
 }
 
-.MicrosoftMap .MapPushpinBase img {
-    border: none;
-    width: 20px;
-    
-}
 
 #header{
     text-align:center;
@@ -26,33 +21,25 @@ div[class*="col-"]{
 }
 
 #upper-header{
-    background-color: #bf2e2e;
+    background-color: #a6ce39;
     padding-top: 3%;
     font-size: 150%;
-    color: white;
+    color: white !important;
     min-height: 70%;
 } 
 
-#lower-header{
-    background-color: white;
-    z-index:1;
+#upper-header a{
+    color:white;
+    font-size:large;
 }
 
 #avatar{
-   margin-bottom: -30%;
+    margin-bottom: -30%;
     margin-top: -40%;
     background-color: white;
-    border-radius: 90px;
-    height: 110px;
-    padding: 8px;
-}
-
-#avatar div{
-    width: 100%;
-    border-radius: 50px;
-    height: 95px;
-    border: 5px solid red;
-    padding-top: 9px;
+    border-radius: 43px;
+    /* height: 110px; */
+    padding: 4px;
 }
 
 #lower-header img{
@@ -70,6 +57,67 @@ div[class*="col-"]{
     text-align:center;
 }
 
+
+.tab-description{
+    
+    color: #53515d;
+}
+
+.tab-description p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.event-row{
+    background-color: #00a54f;
+    text-align: center;
+    margin-bottom: 5px;
+    min-height: 50px;
+    color: white;
+    font-size:large;
+    font-weight:bold;
+}
+
+.event-row:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #54c5cf #fff;
+}
+
+.mission-row{
+    background-color: #e8f6fd;
+    min-height: 50px;
+    margin-bottom:5px;
+    padding-left: 10px !important;
+    font-size: large;
+    font-weight: bold;
+    color: #8aa3af;
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #00a54f;
+    text-align:center;
+   
+    
+}
+
+.footer .bottom-text{
+    padding-top:10px;
+}
+
+.footer p{
+     font-weight:bolder;
+}
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
