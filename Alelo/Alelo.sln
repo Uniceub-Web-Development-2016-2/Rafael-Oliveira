@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Alelo", "SaveBarkley\Alelo.jsproj", "{ED1EA77C-1899-47A3-B871-4F0809926715}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Alelo", "Alelo\Alelo.jsproj", "{ED1EA77C-1899-47A3-B871-4F0809926715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
